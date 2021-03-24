@@ -13,19 +13,16 @@
 
 **Building the LFS Cross Toolchain and Temporary Tools (Chapter 5-7)**
 > ./lfs-init.sh   
-> ./lfs-toolchain.sh   
+> ./lfs-build-tools.sh   
 > source ./lfs-chroot.sh   
-> lfs-chroot-with-int   
-> cd chroot   
-> ./lfs-chroot-init.sh   
-> ./lfs-chroot-toolchain.sh  
-> exit  
-
-**Building the LFS System (Chapter 8-10)**
 > lfs-chroot   
 > cd chroot   
-> ./lfs-chroot-software.sh   
-> ./lfs-chroot-kernel.sh   
+> ./lfs-chroot-init.sh   
+> ./lfs-chroot-build-tools.sh  
+
+**Building the LFS System (Chapter 8-10)**
+> ./lfs-chroot-build-software.sh   
+> ./lfs-chroot-build-kernel.sh   
 > ./lfs-chroot-setup.sh    
     
 >  edit grub.cfg   

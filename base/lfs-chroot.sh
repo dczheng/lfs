@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lfs-chroot-with-init() {
+lfs-chroot() {
     chown -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
     chown -R root:root $LFS/lib64
     mkdir -pv $LFS/{dev,proc,sys,run}
@@ -24,8 +24,8 @@ lfs-chroot-with-init() {
         /bin/bash --login +h
 }
 
-lfs-chroot() {
-    chroot "$LFS" /usr/bin/env -i          \
+lfs-chroot2() {
+    chroot "$LFS" /usr/bin/env -i   \
     HOME=/root TERM="$TERM"            \
     PS1='(lfs chroot) \u:\w\$ '        \
     PATH=/bin:/usr/bin:/sbin:/usr/sbin \

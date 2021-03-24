@@ -20,10 +20,12 @@ echo "LFS_PKGS: "$LFS_PKGS
 export LFS_SOFTWARE_BUILD_DIR=${BUILD_ROOT_DIR}/software
 echo "LFS_SOFTWARE_BUILD_DIR: "$LFS_SOFTWARE_BUILD_DIR
 
-export LFS_ADDITIONAL_TOOLS_BUILD_DIR=${BUILD_ROOT_DIR}additional-tools
+export LFS_ADDITIONAL_TOOLS_BUILD_DIR=${BUILD_ROOT_DIR}/additional-temporary-tools-build
 echo "LFS_ADDITIONAL_TOOLS_BUILD_DIR: "$LFS_ADDITIONAL_TOOLS_BUILD_DIR
 
 export MKOPT="-j4"
 alias ls="ls --color"
 alias ll="ls -l"
 alias df="df -h"
+
+source ../build-tools.sh

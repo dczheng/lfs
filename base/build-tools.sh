@@ -28,7 +28,13 @@ run-build() {
     cd $BUILD_DIR
     echo "BUILD_DIR: "$BUILD_DIR
     source $1
-    set-error-flag $? $1
+    if [ 'x'$2 != 'xskip_error' ]
+    then
+        set-error-flag $? $1
+        #echo "do"
+    else
+        echo "skip error"
+    fi
 
     cd $BUILD_ROOT_DIR
 }
