@@ -4,13 +4,13 @@
 source ./lfs-chroot-env.sh
 
 BUILD_DIR=$LFS_SOFTWARE_BUILD_DIR
-#create-dir $BUILD_DIR
+create-dir $BUILD_DIR
 export EXIT_FLAG=""
-#run-build $LFS_TOOLS/software/man-pages
-#run-build $LFS_TOOLS/software/tcl
-#run-build $LFS_TOOLS/software/expect
-#run-build $LFS_TOOLS/software/dejagnu
-#run-build $LFS_TOOLS/software/iana-etc
+run-build $LFS_TOOLS/software/man-pages
+run-build $LFS_TOOLS/software/tcl
+run-build $LFS_TOOLS/software/expect
+run-build $LFS_TOOLS/software/dejagnu
+run-build $LFS_TOOLS/software/iana-etc
 
 #be carefull
 run-build $LFS_TOOLS/software/glibc skip_error
