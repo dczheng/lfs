@@ -14,6 +14,7 @@
 **Building the LFS Cross Toolchain and Temporary Tools (Chapter 5-7)**
 > ./lfs-init.sh   
 > ./lfs-build-tools.sh   
+> rm -rf ./build   
 > source ./lfs-chroot.sh   
 > lfs-chroot   
 > cd chroot   
@@ -22,6 +23,7 @@
 
 **Building the LFS System (Chapter 8-10)**
 > ./lfs-chroot-build-software.sh   
+> rm -rf ./build   
 > ./lfs-chroot-build-kernel.sh   
 > ./lfs-chroot-setup.sh    
     

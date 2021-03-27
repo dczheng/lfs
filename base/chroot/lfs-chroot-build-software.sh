@@ -73,7 +73,7 @@ run-build $LFS_TOOLS/software/grub
 run-build $LFS_TOOLS/software/less
 run-build $LFS_TOOLS/software/gzip
 run-build $LFS_TOOLS/software/iproute2
-fs-build-aux $LFS_TOOLS/software/kbd
+run-build $LFS_TOOLS/software/kbd
 run-build $LFS_TOOLS/software/libpipline
 run-build $LFS_TOOLS/software/make
 run-build $LFS_TOOLS/software/patch
