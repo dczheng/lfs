@@ -15,6 +15,7 @@
 > ./lfs-init.sh   
 > ./lfs-build-tools.sh   
 > rm -rf ./build   
+> su root   
 > source ./lfs-chroot.sh   
 > lfs-chroot   
 > cd chroot   
