@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Build kernel (chapter 10 of LFS-10.1 book).
-cd $LFS/setup
-tar xvf $LFS_PKGS/linux-5.8.3.tar.xz
+source ./lfs-chroot-env.sh
+#tar xvf $LFS_PKGS/linux-5.8.3.tar.xz
 cd linux-5.8.3
 make mrproper
 make menuconfig
