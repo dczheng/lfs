@@ -1,4 +1,4 @@
-tar xvf $PKGS/openssh-8.3p1.tar.gz \
+tar xvf $LFS_PKGS/openssh-8.3p1.tar.gz \
 && cd openssh-8.3p1 \
 && install  -v -m700 -d /var/lib/sshd  \
 && chown    -v root:sys /var/lib/sshd  \

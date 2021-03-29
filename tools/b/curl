@@ -1,6 +1,6 @@
-tar xvf $PKGS/curl-7.71.1.tar.xz\
+tar xvf $LFS_PKGS/curl-7.71.1.tar.xz\
 && cd curl-7.71.1 \
-&& patch -Np1 -i $PKGS/curl-7.71.1-security_fixes-1.patch \
+&& patch -Np1 -i $LFS_PKGS/curl-7.71.1-security_fixes-1.patch \
 && ./configure --prefix=/usr \
             --disable-static   \
             --enable-threaded-resolver  \

@@ -1,4 +1,4 @@
-tar xvf $PKGS/tree-1.8.0.tgz \
+tar xvf $LFS_PKGS/tree-1.8.0.tgz \
 && cd tree-1.8.0 \
 && make $MKOPT  \
 && make MANDIR=/usr/share/man/man1 install \

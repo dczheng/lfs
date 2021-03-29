@@ -1,4 +1,4 @@
-tar xvf $PKGS/libuv-v1.38.1.tar.gz \
+tar xvf $LFS_PKGS/libuv-v1.38.1.tar.gz \
 && cd libuv-v1.38.1 \
 && sh autogen.sh \
 && ./configure --prefix=/usr --disable-static \

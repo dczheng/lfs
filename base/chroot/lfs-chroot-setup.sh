@@ -1,7 +1,9 @@
 #!/bin/bash
 
+source ./lfs-chroot-env.sh
+
 #System configuration (chapter 9 of LFS-10.1 book).
-	SETUP_DIR=${LFS}setup
+	SETUP_DIR=${LFS_TOOLS}/setup
 	mkdir $SETUP_DIR
 	cd $SETUP_DIR
 	tar xvf $LFS_PKGS/lfs-bootscripts-20200818.tar.xz
@@ -142,7 +144,7 @@ cat > /etc/profile << EOF
 export PS1="\u@\W -> "
 alias  ls="ls --color"
 alias  ll="ls -l"
-#End /etc/prifile
+#End /etc/profile
 EOF
 source /etc/profile
 cat /etc/profile

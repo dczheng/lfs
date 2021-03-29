@@ -1,4 +1,4 @@
-tar xvf $PKGS/dhcpcd-9.1.4.tar.xz \
+tar xvf $LFS_PKGS/dhcpcd-9.1.4.tar.xz \
 && cd dhcpcd-9.1.4 \
 && install  -v -m700 -d /var/lib/dhcpcd \
 && groupadd -g 52 dhcpcd        \

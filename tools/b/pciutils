@@ -1,4 +1,4 @@
-tar xvf $PKGS/pciutils-3.7.0.tar.xz \
+tar xvf $LFS_PKGS/pciutils-3.7.0.tar.xz \
 && cd pciutils-3.7.0 \
 && make PREFIX=/usr                \
      SHAREDIR=/usr/share/hwdata \

@@ -1,44 +1,38 @@
 #!/bin/bash
 
-tools-env() {
+export LFS_TOOLS="/lfs-10.0-tools"
+echo "LFS_TOOLS: "$LFS_TOOLS
 
-    export TOOLSDIR="/home/dczheng/work/lfs-10.0-tools/tools"
-    export BUILD_ROOT_DIR=$TOOLSDIR
-    export PKGS=$BUILD_ROOT_DIR/sources
-    cd $TOOLSDIR
+export BUILD_ROOT_DIR=$LFS_TOOLS/tools/build
+echo "BUILD_ROOT_DIR: "$BUILD_ROOT_DIR
 
-    source $TOOLSDIR/../build-tools.sh
+export LFS_PKGS=$LFS_TOOLS/tools/sources
+echo "LFS_PKGS: "$LFS_PKGS
 
-    export MKOPT="-j4"
-    alias ls="ls --color"
-    alias ll="ls -l"
-    alias df="df -h"
-}
+source $LFS_TOOLS/base/build-tools.sh
 
-tools-build() {
-    
-    cd $BUILD_ROOT_DIR
-    create-dir "build"
-    BUILD_BUILD_DIR="build"
-    export EXIT_FLAG=""
-    
-
-    run-build $TOOLSDIR/b/tree
-    run-build $TOOLSDIR/b/libuv
-    run-build $TOOLSDIR/b/libarchive
-    run-build $TOOLSDIR/b/curl
-    run-build $TOOLSDIR/b/cmake
-    run-build $TOOLSDIR/b/sudo
-    run-build $TOOLSDIR/b/ntfs-3g
-    run-build $TOOLSDIR/b/fish
-    run-build $TOOLSDIR/b/openssh
-    run-build $TOOLSDIR/b/which
-    run-build $TOOLSDIR/b/pciutils
-    run-build $TOOLSDIR/b/libnl
-    run-build $TOOLSDIR/b/wpa_supplicant
-    run-build $TOOLSDIR/b/dhcpcd
+export BUILD_DIR=$BUILD_ROOT_DIR
+echo "BUILD_DIR: "$BUILD_DIR
 
 
-}
+export MKOPT="-j4"
+alias ls="ls --color"
+alias ll="ls -l"
+alias df="df -h"
 
-tools-env
+create-dir $BUILD_DIR
+export EXIT_FLAG=""
+run-build $LFS_TOOLS/tools/b/tree
+run-build $LFS_TOOLS/tools/b/libuv
+run-build $LFS_TOOLS/tools/b/libarchive
+run-build $LFS_TOOLS/tools/b/curl
+run-build $LFS_TOOLS/tools/b/cmake
+run-build $LFS_TOOLS/tools/b/sudo
+run-build $LFS_TOOLS/tools/b/ntfs-3g
+run-build $LFS_TOOLS/tools/b/fish
+run-build $LFS_TOOLS/tools/b/openssh
+run-build $LFS_TOOLS/tools/b/which
+run-build $LFS_TOOLS/tools/b/pciutils
+run-build $LFS_TOOLS/tools/b/libnl
+run-build $LFS_TOOLS/tools/b/wpa_supplicant
+run-build $LFS_TOOLS/tools/b/dhcpcd

@@ -1,4 +1,4 @@
-tar xvf $PKGS/fish-shell-3.1.2.tar.gz \
+tar xvf $LFS_PKGS/fish-shell-3.1.2.tar.gz \
 && cd fish-shell-3.1.2 \
 && mkdir build \
 && cd build \

@@ -1,4 +1,4 @@
-tar xvf $PKGS/wpa_supplicant-2.9.tar.gz \
+tar xvf $LFS_PKGS/wpa_supplicant-2.9.tar.gz \
 && cd wpa_supplicant-2.9
 cat > wpa_supplicant/.config << EOF
 CONFIG_BACKEND=file

@@ -1,4 +1,4 @@
-tar xvf $PKGS/ntfs-3g_ntfsprogs-2017.3.23.tgz \
+tar xvf $LFS_PKGS/ntfs-3g_ntfsprogs-2017.3.23.tgz \
 && cd ntfs-3g_ntfsprogs-2017.3.23 \
 && ./configure --prefix=/usr        \
             --disable-static     \
