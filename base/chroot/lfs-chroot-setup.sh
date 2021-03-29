@@ -17,8 +17,8 @@ source ./lfs-chroot-env.sh
 # file system  mount-point  type     options             dump  fsck
 #                                                              order
 
-/dev/sda4     /            ext4    defaults            1     1
-/dev/sda5     /home            ext4    defaults            1     1
+/dev/sda5     /            ext4    defaults            1     1
+/dev/sda6     /home            ext4    defaults            1     1
 /dev/sda2     swap         swap     pri=1               0     0
 proc           /proc        proc     nosuid,noexec,nodev 0     0
 sysfs          /sys         sysfs    nosuid,noexec,nodev 0     0
