@@ -8,3 +8,4 @@ X/font
 tools/sources
 tools/build
 base/chroot/linux-5.8.3
+base/chroot/setup

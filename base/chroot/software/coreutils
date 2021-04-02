@@ -7,11 +7,6 @@ tar xvf $LFS_PKGS/coreutils-8.32.tar.xz \
             --prefix=/usr            \
                         --enable-no-install-program=kill,uptime \
 && make  $MKOPT \
-&& make NON_ROOT_USERNAME=tester check-root \
-&& echo "dummy:x:102:tester" >> /etc/group \
-&& chown -Rv tester .  \
-&& su tester -c "PATH=$PATH make RUN_EXPENSIVE_TESTS=yes check" \
-&& sed -i '/dummy/d' /etc/group \
 && make install \
 && mv -v /usr/bin/{cat,chgrp,chmod,chown,cp,date,dd,df,echo} /bin \
 && mv -v /usr/bin/{false,ln,ls,mkdir,mknod,mv,pwd,rm} /bin \

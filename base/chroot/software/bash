@@ -8,7 +8,3 @@ tar xvf $LFS_PKGS/bash-5.0.tar.gz \
 && make $MKOPT \
 && make install \
 && mv -vf /usr/bin/bash /bin
-
-#exec /bin/bash --login +h
-#chown -Rv tester . 
-#su tester -c " PATH=$PATH make tests < $(tty) " \

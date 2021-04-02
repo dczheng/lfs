@@ -1,5 +1,5 @@
-tar xvf $LFS_PKGS/fish-shell-3.1.2.tar.gz \
-&& cd fish-shell-3.1.2 \
+tar xvf $LFS_PKGS/fish-3.1.2.tar.gz \
+&& cd fish-3.1.2 \
 && mkdir build \
 && cd build \
 && cmake ..  -DCMAKE_INSTALL_PREFIX=/usr \

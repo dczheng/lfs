@@ -29,7 +29,3 @@ tar xvf $LFS_PKGS/gcc-10.2.0.tar.xz \
 && rm -v dummy.c a.out dummy.log \
 && mkdir -pv /usr/share/gdb/auto-load/usr/lib \
 && mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
-
-#chown -Rv tester .  
-#su tester -c "PATH=$PATH make -k check" 
-#../contrib/test_summary 
