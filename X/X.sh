@@ -25,6 +25,110 @@ alias df="df -h"
 create-dir $BUILD_DIR
 export EXIT_FLAG=""
 
+lib-build() {
+    cd $XDIR/lib
+    for package in $(grep -v '^#' $XDIR/lib.md5 | awk '{print $2}')
+    do
+    
+      if [ 'x'$EXIT_FLAG != 'x' ]
+      then
+        cd $XDIR
+        return
+      fi
+    
+      packagedir=${package%.tar.bz2}
+      tar -xf $package
+      pushd $packagedir
+      docdir="--docdir=/usr/share/doc/$packagedir"
+    
+      case $packagedir in
+        libICE* )
+          ./configure $XORG_CONFIG $docdir ICE_LIBS=-lpthread
+        ;;
+    
+        libXfont2-[0-9]* )
+          ./configure $XORG_CONFIG $docdir --disable-devel-docs
+        ;;
+    
+        libXt-[0-9]* )
+          ./configure $XORG_CONFIG $docdir \
+                      --with-appdefaultdir=/etc/X11/app-defaults
+        ;;
+    
+        * )
+          ./configure $XORG_CONFIG $docdir
+        ;;
+      esac \
+      && make $MKOPT \
+      && make install
+      set-error-flag $? $packagedir
+      popd
+    
+      rm -rf $packagedir
+      /sbin/ldconfig
+    
+    done
+    cd $XDIR
+}
+    
+app-build() {
+    cd $XDIR/app
+    for package in $(grep -v '^#' $XDIR/app.md5 | awk '{print $2}')
+    do
+      if [ 'x'$EXIT_FLAG != 'x' ]
+      then
+          cd $XDIR
+    	  return
+      fi
+    
+      packagedir=${package%.tar.?z*}
+      tar -xf $package
+      pushd $packagedir
+         case $packagedir in
+           luit-[0-9]* )
+             sed -i -e "/D_XOPEN/s/5/6/" configure
+           ;;
+         esac
+    
+         ./configure $XORG_CONFIG \
+         && make $MKOPT \
+         && make install
+         set-error-flag $? $packagedir
+      popd
+      rm -rf $packagedir
+    done
+    rm -f /usr/bin/xkeystone
+    cd $XDIR
+    echo $EXIT_FLAG
+}
+    
+font-build() {
+    
+    cd $XDIR/font
+    for package in $(grep -v '^#' $XDIR/font.md5 | awk '{print $2}')
+    do
+      if [ 'x'$EXIT_FLAG != 'x' ]
+      then
+          cd $XDIR
+    	  return
+      fi
+    
+      packagedir=${package%.tar.bz2}
+      tar -xf $package
+      pushd $packagedir
+        ./configure $XORG_CONFIG \
+        && make $MKOPT \
+        && make install
+        set-error-flag $? $packagedir
+      popd
+      rm -rf $packagedir
+    done
+    
+    install -v -d -m755 /usr/share/fonts  &&
+    cd $XDIR
+    
+}
+
 run-build $XDIR/b/freetype
 run-build $XDIR/b/fontconfig
 run-build $XDIR/b/libpng
@@ -68,107 +172,3 @@ run-build $XDIR/b/mtdev
 run-build $XDIR/b/xf86-input-evdev
 run-build $XDIR/b/libinput
 
-lib-build() {
-
-cd $XDIR/lib
-for package in $(grep -v '^#' $XDIR/lib.md5 | awk '{print $2}')
-do
-
-  if [ 'x'$EXIT_FLAG != 'x' ]
-  then
-    cd $XDIR
-    return
-  fi
-
-  packagedir=${package%.tar.bz2}
-  tar -xf $package
-  pushd $packagedir
-  docdir="--docdir=/usr/share/doc/$packagedir"
-
-  case $packagedir in
-    libICE* )
-      ./configure $XORG_CONFIG $docdir ICE_LIBS=-lpthread
-    ;;
-
-    libXfont2-[0-9]* )
-      ./configure $XORG_CONFIG $docdir --disable-devel-docs
-    ;;
-
-    libXt-[0-9]* )
-      ./configure $XORG_CONFIG $docdir \
-                  --with-appdefaultdir=/etc/X11/app-defaults
-    ;;
-
-    * )
-      ./configure $XORG_CONFIG $docdir
-    ;;
-  esac \
-  && make $MKOPT \
-  && make install
-  set-error-flag $? $packagedir
-  popd
-
-  rm -rf $packagedir
-  /sbin/ldconfig
-
-done
-cd $XDIR
-}
-
-app-build() {
-cd $XDIR/app
-for package in $(grep -v '^#' $XDIR/app.md5 | awk '{print $2}')
-do
-  if [ 'x'$EXIT_FLAG != 'x' ]
-  then
-      cd $XDIR
-	  return
-  fi
-
-  packagedir=${package%.tar.?z*}
-  tar -xf $package
-  pushd $packagedir
-     case $packagedir in
-       luit-[0-9]* )
-         sed -i -e "/D_XOPEN/s/5/6/" configure
-       ;;
-     esac
-
-     ./configure $XORG_CONFIG \
-     && make $MKOPT \
-     && make install
-     set-error-flag $? $packagedir
-  popd
-  rm -rf $packagedir
-done
-rm -f /usr/bin/xkeystone
-cd $XDIR
-echo $EXIT_FLAG
-}
-
-font-build() {
-
-cd $XDIR/font
-for package in $(grep -v '^#' $XDIR/font.md5 | awk '{print $2}')
-do
-  if [ 'x'$EXIT_FLAG != 'x' ]
-  then
-      cd $XDIR
-	  return
-  fi
-
-  packagedir=${package%.tar.bz2}
-  tar -xf $package
-  pushd $packagedir
-    ./configure $XORG_CONFIG \
-    && make $MKOPT \
-    && make install
-    set-error-flag $? $packagedir
-  popd
-  rm -rf $packagedir
-done
-
-install -v -d -m755 /usr/share/fonts  &&
-cd $XDIR
-
-}
