@@ -1,95 +1,72 @@
 #!/bin/bash
+source ./build-tools.sh
 
-lfs-chroot() {
-    export LFS=/mnt
-    mount -v --bind /dev $LFS/dev
-    mount -v --bind /dev/pts $LFS/dev/pts
-    mount -v --bind /home $LFS/home
-    mount -vt proc proc $LFS/proc
-    mount -vt sysfs sysfs $LFS/sys
-    mount -vt tmpfs tmpfs $LFS/run
+export XDIR="/home/dczheng/work/lfs-10.0-tools/X"
+echo "XDIR: "$XDIR
 
-    chroot "$LFS" /usr/bin/env -i \
-        TERM="$TERM"
-        PS1="(lfs chroot) \u@\W > " \
-        PATH=/bin:/usr/bin/:/sbin:/usr/sbin \
-        /bin/bash --login +h
-}
+export LFS_PKGS=$XDIR/sources
+echo "LFS_PKGS: "$LFS_PKGS
 
-X-env() {
+export BUILD_ROOT_DIR=$XDIR/build
+echo "BUILD_ROOT_DIR: " $BUILD_ROOT_DIR
 
-    export XDIR="/home/dczheng/work/lfs-10.0-tools/X"
-    export BUILD_ROOT_DIR=$XDIR
-    cd $XDIR
+export BUILD_DIR = $BUILD_ROOT_DIR
+echo "BUILD_DIR: " $BUILD_DIR
 
-    source ./build-tools.sh
+export XORG_PREFIX="/usr"
+export XORG_CONFIG="--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static"
 
-    export XORG_PREFIX="/usr"
-    export XORG_CONFIG="--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static"
+export MKOPT="-j4"
+alias ls="ls --color"
+alias ll="ls -l"
+alias df="df -h"
 
-    export MKOPT="-j4"
-    alias ls="ls --color"
-    alias ll="ls -l"
-    alias df="df -h"
-}
-
-X-build() {
     
-    cd $BUILD_ROOT_DIR
-    export PKGS=$BUILD_ROOT_DIR/base
-    create-dir "base-build"
-    BUILD_BUILD_DIR="base-build"
-    export EXIT_FLAG=""
-    
-    #run-build $XDIR/base-b/freetype
-    #run-build $XDIR/base-b/fontconfig
-    #run-build $XDIR/base-b/libpng
+create-dir $BUILD_DIR
+export EXIT_FLAG=""
 
-    #run-build $XDIR/base-b/util-macros
-    #run-build $XDIR/base-b/xorgproto
-    #run-build $XDIR/base-b/libXau
-    #run-build $XDIR/base-b/libXdmcp
-    #run-build $XDIR/base-b/xcb-proto
-    #run-build $XDIR/base-b/libxcb
+run-build $XDIR/b/freetype
+run-build $XDIR/b/fontconfig
+run-build $XDIR/b/libpng
+run-build $XDIR/b/util-macros
+run-build $XDIR/b/xorgproto
+run-build $XDIR/b/libXau
+run-build $XDIR/b/libXdmcp
+run-build $XDIR/b/xcb-proto
+run-build $XDIR/b/libxcb
 
-    #lib-build
+lib-build
 
-    #run-build $XDIR/base-b/xcb-util
-    #run-build $XDIR/base-b/xcb-util-image
-    #run-build $XDIR/base-b/xcb-util-keysyms
-    #run-build $XDIR/base-b/xcb-util-renderutil
-    #run-build $XDIR/base-b/xcb-util-wm
-    #run-build $XDIR/base-b/xcb-util-cursor
+run-build $XDIR/b/xcb-util
+run-build $XDIR/b/xcb-util-image
+run-build $XDIR/b/xcb-util-keysyms
+run-build $XDIR/b/xcb-util-renderutil
+run-build $XDIR/b/xcb-util-wm
+run-build $XDIR/b/xcb-util-cursor
+run-build $XDIR/b/libdrm
+run-build $XDIR/b/markupsafe
+run-build $XDIR/b/mako
+run-build $XDIR/b/mesa
+run-build $XDIR/b/xbitmaps
 
-    #run-build $XDIR/base-b/libdrm
-    #run-build $XDIR/base-b/markupsafe
-    #run-build $XDIR/base-b/mako
-    #run-build $XDIR/base-b/mesa
+app-build
 
-    #run-build $XDIR/base-b/xbitmaps
+run-build $XDIR/b/xcursor-themes
 
-    #app-build
+font-build
 
-    #run-build $XDIR/base-b/xcursor-themes
-
-    #font-build
-    #run-build $XDIR/base-b/xkeyboard-config
-    #run-build $XDIR/base-b/pixman
-    #run-build $XDIR/base-b/xorg-server
-    #
-    #run-build $XDIR/base-b/xterm
-    #run-build $XDIR/base-b/xclock
-    #run-build $XDIR/base-b/xinit
-
-    #run-build $XDIR/base-b/libevdev
-    #run-build $XDIR/base-b/xf86-input-synaptics
-    #run-build $XDIR/base-b/xf86-video-intel
-
-    run-build $XDIR/base-b/mtdev
-    run-build $XDIR/base-b/xf86-input-evdev
-    run-build $XDIR/base-b/libinput
-
-}
+run-build $XDIR/b/xkeyboard-config
+run-build $XDIR/b/pixman
+run-build $XDIR/b/xorg-server
+run-build $XDIR/b/xterm
+run-build $XDIR/b/xclock
+run-build $XDIR/b/xinit
+run-build $XDIR/b/libevdev
+run-build $XDIR/b/xf86-input-synaptics
+run-build $XDIR/b/xf86-video-intel
+run-build $XDIR/b/mtdev
+run-build $XDIR/b/xf86-input-evdev
+run-build $XDIR/b/libinput
 
 lib-build() {
 
@@ -195,5 +172,3 @@ install -v -d -m755 /usr/share/fonts  &&
 cd $XDIR
 
 }
-
-X-env

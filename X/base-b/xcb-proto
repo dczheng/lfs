@@ -1,4 +1,0 @@
-tar xvf $PKGS/xcb-proto-1.14.tar.xz \
-&& cd xcb-proto-1.14 \
-&& ./configure $XORG_CONFIG \
-&& make install

@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/xcursor-themes-1.0.6.tar.bz2\
+&& cd xcursor-themes-1.0.6 \
+&& ./configure $XORG_CONFIG \
+&& make $MKOPT \
+&& make install

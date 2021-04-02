@@ -1,4 +1,0 @@
-tar xvf $PKGS/MarkupSafe-1.1.1.tar.gz \
-&& cd MarkupSafe-1.1.1 \
-&& python3 setup.py build \
-&& python3 setup.py install --optimize=1

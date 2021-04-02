@@ -1,5 +1,0 @@
-tar xvf $PKGS/libxcb-1.14.tar.xz \
-&& cd libxcb-1.14 \
-&& ./configure --without-doxygen $XORG_CONFIG \
-&& make  $MKOPT \
-&& make install
