@@ -1,7 +1,7 @@
 #!/bin/bash
 source ./build-tools.sh
 
-export XDIR="/home/dczheng/work/lfs-10.0-tools/X"
+export XDIR="/home/dczheng/work/os/lfs-10.0-tools/X"
 echo "XDIR: "$XDIR
 
 export LFS_PKGS=$XDIR/sources
@@ -10,8 +10,8 @@ echo "LFS_PKGS: "$LFS_PKGS
 export BUILD_ROOT_DIR=$XDIR/build
 echo "BUILD_ROOT_DIR: " $BUILD_ROOT_DIR
 
-export BUILD_DIR = $BUILD_ROOT_DIR
-echo "BUILD_DIR: " $BUILD_DIR
+export BUILD_DIR=$BUILD_ROOT_DIR
+echo "BUILD_DIR: "$BUILD_DIR
 
 export XORG_PREFIX="/usr"
 export XORG_CONFIG="--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static"
