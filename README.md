@@ -27,11 +27,11 @@
     
 ### Booting the LFS System (Chapter 8-10)
 - Edit grub.cfg
->> menuentry "GNU/Linux, Linux 5.8.3-lfs-10.0" {   
->>>        insmod ext2  
->>>        set root=(hd0,X)  
->>>        linux /boot/vmlinuz-5.8.3-lfs-10.0 root=/dev/sdaX ro  
->>} 
+> menuentry "GNU/Linux, Linux 5.8.3-lfs-10.0" {   
+>>        insmod ext2  
+>>        set root=(hd0,X)  
+>>        linux /boot/vmlinuz-5.8.3-lfs-10.0 root=/dev/sdaX ro  
+> } 
 
 ## Tools
 ### Edit Environment Varibles in tools/tools.sh 
