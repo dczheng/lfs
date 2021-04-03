@@ -31,6 +31,6 @@
 >  edit grub.cfg   
 >>    menuentry "GNU/Linux, Linux 5.8.3-lfs-10.0" {   
 >>        insmod ext2  
->>        set root=(hd0,X) or set root="hd0,gptX"  
+>>        set root=(hd0,X)  
 >>        linux /boot/vmlinuz-5.8.3-lfs-10.0 root=/dev/sdaX ro  
 >>    } 
