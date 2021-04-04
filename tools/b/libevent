@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/libevent-2.1.12-stable.tar.gz \
+&& cd libevent-2.1.12-stable \
+&& ./configure --prefix=/usr --disable-static \
+&& make $MKOPT \
+&& make install

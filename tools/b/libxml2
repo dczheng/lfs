@@ -1,0 +1,8 @@
+tar xvf $LFS_PKGS/libxml2-2.9.10.tar.gz \
+&& cd libxml2-2.9.10 \
+&& ./configure --prefix=/usr    \
+            --disable-static \
+            --with-history   \
+            --with-python=/usr/bin/python3 \
+&& make $MKOPT \
+&& make install

@@ -1,0 +1,13 @@
+tar xvf $LFS_PKGS/Python-2.7.18.tar.xz \
+&& cd Python-2.7.18 \
+&& sed -i '/2to3/d' ./setup.py \
+&&  ./configure --prefix=/usr       \
+            --enable-shared     \
+            --with-system-expat \
+            --with-system-ffi   \
+            --enable-unicode=ucs4  \
+&& make $MKOPT \
+&& make altinstall                       \
+&& ln -s python2.7        /usr/bin/python2   \
+&& ln -s python2.7-config /usr/bin/python2-config \
+&& chmod -v 755 /usr/lib/libpython2.7.so.1.0
