@@ -1,0 +1,7 @@
+tar xvf $LFS_PKGS/c-ares-1.17.1.tar.gz \
+&& cd c-ares-1.17.1 \
+&& mkdir build \
+&& cd    build  \
+&& cmake  -DCMAKE_INSTALL_PREFIX=/usr .. \
+&& make $MKOPT \
+&& make install

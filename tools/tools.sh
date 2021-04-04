@@ -48,4 +48,14 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/libxslt
 #run-build $LFS_TOOLS/tools/b/glib
 #run-build $LFS_TOOLS/tools/b/libevent
-run-build $LFS_TOOLS/tools/b/tmux
+#run-build $LFS_TOOLS/tools/b/tmux
+#run-build $LFS_TOOLS/tools/b/dbus
+#run-build $LFS_TOOLS/tools/b/dbus-glib
+#run-build $LFS_TOOLS/tools/b/nspr
+#run-build $LFS_TOOLS/tools/b/nss
+#run-build $LFS_TOOLS/tools/b/icu
+#run-build $LFS_TOOLS/tools/b/c-ares
+#run-build $LFS_TOOLS/tools/b/nghttp2
+#run-build $LFS_TOOLS/tools/b/node
+#run-build $LFS_TOOLS/tools/b/nasm
+run-build $LFS_TOOLS/tools/b/libjpeg

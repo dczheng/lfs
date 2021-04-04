@@ -1,5 +1,5 @@
-tar xvf $LFS_PKGS/libuv-v1.38.1.tar.gz \
-&& cd libuv-v1.38.1 \
+tar xvf $LFS_PKGS/libuv-v1.41.0.tar.gz\
+&& cd libuv-v1.41.0 \
 && sh autogen.sh \
 && ./configure --prefix=/usr --disable-static \
 && make $MKOPT \
