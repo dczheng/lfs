@@ -58,4 +58,7 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/nghttp2
 #run-build $LFS_TOOLS/tools/b/node
 #run-build $LFS_TOOLS/tools/b/nasm
-run-build $LFS_TOOLS/tools/b/libjpeg
+#run-build $LFS_TOOLS/tools/b/libjpeg
+#run-build $LFS_TOOLS/tools/b/wayland
+#run-build $LFS_TOOLS/tools/b/wayland-protocols
+run-build $LFS_TOOLS/tools/b/libxkb-common
