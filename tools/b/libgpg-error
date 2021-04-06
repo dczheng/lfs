@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/libgpg-error-1.41.tar.bz2 \
+&& cd libgpg-error-1.41 \
+&& ./configure --prefix=/usr \
+&& make $MKOPT  \
+&& make install

@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/gmime-3.2.7.tar.xz \
+&& cd gmime-3.2.7 \
+&& ./configure --prefix=/usr  --disable-static \
+&& make $MKOPT  \
+&& make install

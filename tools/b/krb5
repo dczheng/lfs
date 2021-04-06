@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/krb5-1.19.1.tar.gz \
+&& cd krb5-1.19.1/src \
+&& ./configure --prefix=/usr \
+&& make $MKOPT \
+&& make install
