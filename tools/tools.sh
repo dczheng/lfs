@@ -49,7 +49,7 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/glib
 #run-build $LFS_TOOLS/tools/b/libevent
 #run-build $LFS_TOOLS/tools/b/tmux
-run-build $LFS_TOOLS/tools/b/cloc
+#run-build $LFS_TOOLS/tools/b/cloc
 #run-build $LFS_TOOLS/tools/b/wayland
 #run-build $LFS_TOOLS/tools/b/wayland-protocols
 #run-build $LFS_TOOLS/tools/b/libxkb-common
@@ -60,7 +60,7 @@ run-build $LFS_TOOLS/tools/b/cloc
 #run-build $LFS_TOOLS/tools/b/nspr
 #run-build $LFS_TOOLS/tools/b/nss
 #run-build $LFS_TOOLS/tools/b/alsa-lib
-run-build $LFS_TOOLS/tools/b/krb5
+#run-build $LFS_TOOLS/tools/b/krb5
 
 #########################################
 
