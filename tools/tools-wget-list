@@ -45,5 +45,6 @@ https://dist.libuv.org/dist/v1.41.0/libuv-v1.41.0.tar.gz
 https://github.com/nghttp2/nghttp2/releases/download/v1.43.0/nghttp2-1.43.0.tar.xz
 http://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.xz
 https://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.6.tar.gz
-https://xkbcommon.org/download/libxkbcommon-1.0.3.tar.xz
+https://wayland.freedesktop.org/releases/wayland-protocols-1.20.tar.xz
 https://wayland.freedesktop.org/releases/wayland-1.19.0.tar.xz
+https://xkbcommon.org/download/libxkbcommon-1.0.3.tar.xz
