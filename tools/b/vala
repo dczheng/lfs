@@ -1,0 +1,6 @@
+tar xvf $LFS_PKGS/vala-0.50.3.tar.xz \
+&& cd vala-0.50.3 \
+&& ./configure --prefix=/usr              \
+&& make $MKOPT \
+&& make install
+

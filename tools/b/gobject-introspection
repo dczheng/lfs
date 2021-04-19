@@ -1,0 +1,8 @@
+tar xvf $LFS_PKGS/gobject-introspection-1.66.1.tar.xz \
+&& cd gobject-introspection-1.66.1 \
+&& mkdir build  \
+&& cd    build \
+&& meson --prefix=/usr .. \
+&& ninja \
+&& ninja install
+

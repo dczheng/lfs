@@ -62,6 +62,12 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/alsa-lib
 #run-build $LFS_TOOLS/tools/b/krb5
 
+#run-build $LFS_TOOLS/tools/b/gobject-introspection
+#run-build $LFS_TOOLS/tools/b/graphviz
+#run-build $LFS_TOOLS/tools/b/vala
+#run-build $LFS_TOOLS/tools/b/libical
+#run-build $LFS_TOOLS/tools/b/bluez
+
 #########################################
 
 #run-build $LFS_TOOLS/tools/b/libgpg-error
