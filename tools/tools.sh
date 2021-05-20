@@ -67,6 +67,7 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/vala
 #run-build $LFS_TOOLS/tools/b/libical
 #run-build $LFS_TOOLS/tools/b/bluez
+run-build $LFS_TOOLS/tools/b/cpio
 
 #########################################
 
@@ -76,3 +77,5 @@ export EXIT_FLAG=""
 #run-build $LFS_TOOLS/tools/b/c-ares
 #run-build $LFS_TOOLS/tools/b/nghttp2
 #run-build $LFS_TOOLS/tools/b/node
+
+#run-build $LFS_TOOLS/tools/b/pcre

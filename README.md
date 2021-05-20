@@ -9,6 +9,7 @@
 - or ./pkgs-dd.sh   
 
 ### Building the LFS Cross Toolchain and Temporary Tools (Chapter 5-7)   
+- ./version-check.sh   
 - ./lfs-init.sh   
 - ./lfs-build-tools.sh   
 - rm -rf ./build   
