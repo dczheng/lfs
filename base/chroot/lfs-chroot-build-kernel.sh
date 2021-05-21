@@ -5,7 +5,8 @@ source ./lfs-chroot-env.sh
 tar xvf $LFS_PKGS/linux-5.8.3.tar.xz
 cd linux-5.8.3
 make mrproper
-make menuconfig
+make defconfig
+#make menuconfig
 make
 make modules_install
 cp -iv arch/x86_64/boot/bzImage /boot/vmlinuz-5.8.3-lfs-10.0

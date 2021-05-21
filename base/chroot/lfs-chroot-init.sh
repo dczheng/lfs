@@ -17,7 +17,7 @@ ln -sfv /run/lock /var/lock
 install -dv -m 0750 /root
 install -dv -m 1777 /tmp /var/tmp
 
-ln -sv /proc/self/mounts /etc/mtab
+ln -sfv /proc/self/mounts /etc/mtab
 echo "127.0.0.1 localhost LFS" > /etc/hosts
 
 cat > /etc/passwd << EOF
