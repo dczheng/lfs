@@ -1,0 +1,5 @@
+tar xvf $LFS_PKGS/feh-3.6.3.tar.bz2 \
+&& cd feh-3.6.3 \
+&& sed -i "s:doc/feh:&-3.6.3:" config.mk \
+&& make PREFIX=/usr \
+&& make PREFIX=/usr install

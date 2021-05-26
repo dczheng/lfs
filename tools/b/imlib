@@ -1,0 +1,8 @@
+tar xvf $LFS_PKGS/imlib2-1.7.1.tar.bz2 \
+&& cd imlib2-1.7.1 \
+&& mkdir build \
+&& cd build \
+&& ../configure --prefix=/usr      \
+            --disable-static \
+&& make $MKOPT  \
+&& make install
