@@ -1,7 +1,0 @@
-tar xvf $LFS_PKGS/libxkbcommon-1.0.3.tar.xz \
-&& cd libxkbcommon-1.0.3 \
-&& mkdir build \
-&& cd    build \
-&& meson --prefix=/usr -Denable-docs=false .. \
-&& ninja \
-&& ninja install

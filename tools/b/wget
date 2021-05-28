@@ -1,9 +1,0 @@
-tar xvf $LFS_PKGS/wget-1.21.1.tar.gz \
-&& cd wget-1.21.1 \
-&& mkdir build \
-&& cd build \
-&& ../configure --prefix=/usr      \
-            --sysconfdir=/etc  \
-            --with-ssl=openssl \
-&& make $MKOPT  \
-&& make install

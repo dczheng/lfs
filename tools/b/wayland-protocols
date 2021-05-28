@@ -1,5 +1,0 @@
-tar xvf $LFS_PKGS/wayland-protocols-1.20.tar.xz \
-&& cd wayland-protocols-1.20 \
-&& ./configure --prefix=/usr    \
-&& make $MKTOP \
-&& make install

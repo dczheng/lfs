@@ -1,0 +1,18 @@
+#!/bin/bash
+source ./env.sh
+
+url="https://curl.haxx.se/download/curl-7.71.1.tar.xz"
+wget http://www.linuxfromscratch.org/patches/blfs/10.0/curl-7.71.1-security_fixes-1.patch -P $pdir
+
+zux-get \
+&& patch -Np1 -i $pdir/curl-7.71.1-security_fixes-1.patch \
+&& ./configure --prefix=/usr \
+            --disable-static   \
+            --enable-threaded-resolver  \
+            --with-ca-path=/etc/ssl/certs \
+&& make $mkopt \
+&& make install \
+&& rm -rf docs/examples/.deps \
+&& find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 \) -exec rm {} \; \
+&& install -v -d -m755 /usr/share/doc/curl-7.71.1 \
+&& cp -v -R docs/*     /usr/share/doc/curl-7.71.1

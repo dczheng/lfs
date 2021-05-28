@@ -1,5 +1,0 @@
-tar xvf $LFS_PKGS/nasm-2.15.05.tar.xz \
-&& cd nasm-2.15.05 \
-&& ./configure --prefix=/usr  \
-&& make $MKOPT \
-&& make install \

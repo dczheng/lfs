@@ -1,5 +1,0 @@
-tar xvf $LFS_PKGS/which-2.21.tar.gz \
-&& cd which-2.21 \
-&& ./configure --prefix=/usr \
-&& make $MKOPT  \
-&& make install

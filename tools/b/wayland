@@ -1,7 +1,0 @@
-tar xvf $LFS_PKGS/wayland-1.19.0.tar.xz \
-&& cd wayland-1.19.0 \
-&& ./configure --prefix=/usr    \
-            --disable-static \
-            --disable-documentation \
-&& make $MKTOP \
-&& make install

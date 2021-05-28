@@ -1,7 +1,0 @@
-tar xvf $LFS_PKGS/git-2.30.1.tar.xz \
-&& cd git-2.30.1 \
-&& ./configure --prefix=/usr \
-            --with-gitconfig=/etc/gitconfig \
-            --with-python=python3 \
-&& make $MKOPT  \
-&& make install

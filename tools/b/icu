@@ -1,5 +1,0 @@
-tar xvf $LFS_PKGS/icu4c-68_2-src.tgz \
-&& cd icu/source \
-&& ./configure --prefix=/usr                  \
-&& make $MKOPT \
-&& make install
