@@ -1,6 +1,7 @@
 #!/bin/bash
 source ./env.sh
-usr="https://www.kernel.org/pub/linux/bluetooth/bluez-5.55.tar.xz"
+url="https://www.kernel.org/pub/linux/bluetooth/bluez-5.55.tar.xz"
+
 zux-get \
 && ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --enable-library --disable-systemd \
 && make $mkopt  \

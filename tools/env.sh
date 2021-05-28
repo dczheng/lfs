@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zdir="/home/dczheng/work/os/zux"
+zdir="/home/dczheng/work/os/zux/tools"
 
 pdir=$zdir/pkgs
 bdir=$zdir/build
