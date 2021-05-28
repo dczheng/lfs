@@ -73,7 +73,10 @@ export EXIT_FLAG=""
 
 #run-build $LFS_TOOLS/tools/b/imlib
 #run-build $LFS_TOOLS/tools/b/feh
-run-build $LFS_TOOLS/tools/b/vim
+#run-build $LFS_TOOLS/tools/b/vim
+
+run-build $LFS_TOOLS/tools/b/bridge-utils
+
 
 #########################################
 
