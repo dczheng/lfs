@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://dbus.freedesktop.org/releases/dbus/dbus-1.12.20.tar.gz"
+pkg_url="https://dbus.freedesktop.org/releases/dbus/dbus-1.12.20.tar.gz"
 zux-get \
 && ./configure --prefix=/usr                        \
             --sysconfdir=/etc                    \

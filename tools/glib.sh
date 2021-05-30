@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://download.gnome.org/sources/glib/2.66/glib-2.66.7.tar.xz"
+pkg_url="https://download.gnome.org/sources/glib/2.66/glib-2.66.7.tar.xz"
 
 zux-get \
 && mkdir build \

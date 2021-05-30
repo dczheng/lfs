@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="ftp://ftp.freedesktop.org/pub/mesa/mesa-20.1.5.tar.xz"
+pkg_url="ftp://ftp.freedesktop.org/pub/mesa/mesa-20.1.5.tar.xz"
 
 zux-get \
 && sed '1s/python/&3/' -i bin/symbols-check.py \

@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://download.gnome.org/sources/vala/0.50/vala-0.50.3.tar.xz"
+pkg_url="https://download.gnome.org/sources/vala/0.50/vala-0.50.3.tar.xz"
 zux-get \
 && ./configure --prefix=/usr              \
 && make $mkopt \

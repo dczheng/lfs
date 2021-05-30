@@ -1,11 +1,11 @@
 #!/bin/bash
 source ./env.sh
 
-url="https://downloads.sourceforge.net/freetype/freetype-2.10.2.tar.xz"
-wget https://downloads.sourceforge.net/freetype/freetype-doc-2.10.2.tar.xz -P $pdir
+pkg_url="https://downloads.sourceforge.net/freetype/freetype-2.10.2.tar.xz"
+pat_url="https://downloads.sourceforge.net/freetype/freetype-doc-2.10.2.tar.xz"
 
 zux-get \
-&& tar xvf $pdir/freetype-doc-2.10.2.tar.xz --strip-components=2 -C docs \
+&& tar xvf $pat --strip-components=2 -C docs \
 && sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg \
 && sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" \
     -i include/freetype/config/ftoption.h  \

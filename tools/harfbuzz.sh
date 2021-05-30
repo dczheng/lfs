@@ -1,7 +1,7 @@
 #!/bin/bash
 source ./env.sh
 
-url="https://github.com/harfbuzz/harfbuzz/releases/download/2.8.1/harfbuzz-2.8.1.tar.xz"
+pkg_url="https://github.com/harfbuzz/harfbuzz/releases/download/2.8.1/harfbuzz-2.8.1.tar.xz"
 
 zux-get \
 && mkdir build \

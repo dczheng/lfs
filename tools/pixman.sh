@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://www.cairographics.org/releases/pixman-0.40.0.tar.gz"
+pkg_url="https://www.cairographics.org/releases/pixman-0.40.0.tar.gz"
 
 zux-get \
 && mkdir build \

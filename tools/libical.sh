@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://github.com/libical/libical/releases/download/v3.0.9/libical-3.0.9.tar.gz"
+pkg_url="https://github.com/libical/libical/releases/download/v3.0.9/libical-3.0.9.tar.gz"
 zux-get \
 && mkdir build \
 && cd    build \

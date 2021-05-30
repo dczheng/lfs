@@ -1,7 +1,7 @@
 #!/bin/bash
 source ./build-tools.sh
 
-export XDIR="/home/dczheng/work/os/lfs-10.0-tools/X"
+export XDIR="/home/dczheng/work/os/zux/X"
 echo "XDIR: "$XDIR
 
 export LFS_PKGS=$XDIR/sources

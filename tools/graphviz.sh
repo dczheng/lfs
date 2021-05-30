@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz"
+pkg_url="https://www2.graphviz.org/Packages/stable/portable_source/graphviz-2.44.1.tar.gz"
 
 zux-get \
 && sed -i '/LIBPOSTFIX="64"/s/64//' configure.ac \

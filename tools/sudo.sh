@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="http://www.sudo.ws/dist/sudo-1.9.2.tar.gz"
+pkg_url="http://www.sudo.ws/dist/sudo-1.9.2.tar.gz"
 zux-get \
 && ./configure --prefix=/usr              \
             --libexecdir=/usr/lib      \

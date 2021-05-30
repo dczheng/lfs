@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://w1.fi/releases/wpa_supplicant-2.9.tar.gz"
+pkg_url="https://w1.fi/releases/wpa_supplicant-2.9.tar.gz"
 zux-get 
 cat > wpa_supplicant/.config << EOF
 CONFIG_BACKEND=file

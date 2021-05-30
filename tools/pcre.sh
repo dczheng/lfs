@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.bz2"
+pkg_url="https://ftp.pcre.org/pub/pcre/pcre-8.44.tar.bz2"
 
 zux-get \
 && ./configure --prefix=/usr                     \

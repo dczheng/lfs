@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ./env.sh
-url="https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.1.tar.bz2"
+pkg_url="https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.13.1.tar.bz2"
 
 zux-get \
 && rm -f src/fcobjshash.h \

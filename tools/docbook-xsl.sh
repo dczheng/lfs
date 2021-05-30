@@ -1,12 +1,12 @@
 #!/bin/bash
 
 source ./env.sh
-url="https://github.com/docbook/xslt10-stylesheets/releases/download/release/1.79.2/docbook-xsl-nons-1.79.2.tar.bz2"
+pkg_url="https://github.com/docbook/xslt10-stylesheets/releases/download/release/1.79.2/docbook-xsl-nons-1.79.2.tar.bz2"
 
-wget "http://www.linuxfromscratch.org/patches/blfs/10.1/docbook-xsl-nons-1.79.2-stack_fix-1.patch" -P $pdir
+pat_url="http://www.linuxfromscratch.org/patches/blfs/10.1/docbook-xsl-nons-1.79.2-stack_fix-1.patch"
 
 zux-get \
-&& patch -Np1 -i $pdir/docbook-xsl-nons-1.79.2-stack_fix-1.patch \
+&& patch -Np1 -i $pat \
 && install -v -m755 -d /usr/share/xml/docbook/xsl-stylesheets-nons-1.79.2 \
 && cp -v -R VERSION assembly common eclipse epub epub3 extensions fo        \
          highlighting html htmlhelp images javahelp lib manpages params  \

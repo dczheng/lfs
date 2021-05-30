@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://www.kernel.org/pub/software/scm/git/git-2.30.1.tar.xz"
+pkg_url="https://www.kernel.org/pub/software/scm/git/git-2.30.1.tar.xz"
 
 zux-get \
 && ./configure --prefix=/usr \

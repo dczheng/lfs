@@ -1,8 +1,9 @@
 #!/bin/bash
 source ./env.sh
-VERSION="4.1.2"
-#url="http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip"
-url="http://www.docbook.org/xml/$VERSION/docbkx412.zip"
+#VERSION="4.1.2"
+VERSION="4.5"
+pkg_url="http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip"
+#pkg_url="http://www.docbook.org/xml/$VERSION/docbkx412.zip"
 
 
 zux-get \

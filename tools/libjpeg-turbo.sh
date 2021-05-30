@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.6.tar.gz"
+pkg_url="https://downloads.sourceforge.net/libjpeg-turbo/libjpeg-turbo-2.0.6.tar.gz"
 
 zux-get \
 && mkdir build \

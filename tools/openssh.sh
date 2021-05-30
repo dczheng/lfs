@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.3p1.tar.gz"
+pkg_url="http://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.3p1.tar.gz"
 
 zux-get \
 && install  -v -m700 -d /var/lib/sshd  \

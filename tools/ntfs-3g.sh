@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2017.3.23.tgz"
+pkg_url="https://tuxera.com/opensource/ntfs-3g_ntfsprogs-2017.3.23.tgz"
 zux-get \
 && ./configure --prefix=/usr        \
             --disable-static     \

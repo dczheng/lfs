@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="ftp://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2"
+pkg_url="ftp://ftp.gnu.org/gnu/cpio/cpio-2.13.tar.bz2"
 zux-get \
 && sed -i '/The name/,+2 d' src/global.c \
 && ./configure --prefix=/usr --enable-mt   --with-rmt=/usr/libexec/rmt  \

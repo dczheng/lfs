@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="https://cmake.org/files/v3.18/cmake-3.18.1.tar.gz"
+pkg_url="https://cmake.org/files/v3.18/cmake-3.18.1.tar.gz"
 
 zux-get \
 && sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake \

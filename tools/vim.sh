@@ -1,6 +1,6 @@
 #!/bin/bash
 source ./env.sh
-url="http://anduin.linuxfromscratch.org/LFS/vim-8.2.1361.tar.gz"
+pkg_url="http://anduin.linuxfromscratch.org/LFS/vim-8.2.1361.tar.gz"
 zux-get \
 && echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h \
 && ./configure --prefix=/usr \
