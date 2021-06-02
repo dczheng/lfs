@@ -30,9 +30,16 @@ show-env() {
 
 zux-get() {
 
-    pkg=$package_dir/`basename $pkg_url`
-    src_dir=$build_dir/`basename $pkg_url`.src
+    pkg=""
+    if [ "x"$1 != "x" ]; then
+        pkg=$package_dir/$1
+    else
+        pkg=$package_dir/`basename $pkg_url`
+    fi
+    src_dir=$build_dir/`basename $pkg`.src
+
     pat=$package_dir/`basename $pat_url`
+    return
 
     if [ ! -f $pkg ]; then
         wget $pkg_url -O $pkg
