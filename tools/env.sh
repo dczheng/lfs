@@ -39,7 +39,6 @@ zux-get() {
     src_dir=$build_dir/`basename $pkg`.src
 
     pat=$package_dir/`basename $pat_url`
-    return
 
     if [ ! -f $pkg ]; then
         wget $pkg_url -O $pkg
