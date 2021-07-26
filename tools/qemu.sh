@@ -10,4 +10,11 @@ zux-get \
              --audio-drv-list=alsa       \
              --docdir=/usr/share/doc/qemu-5.2.0 \
 && make $mkopt \
-&& make install
+&& make install 
+
+cat > /lib/udev/rules.d/65-kvm.rules << "EOF"
+KERNEL=="kvm", GROUP="kvm", MODE="0660"
+EOF
+
+chgrp kvm  /usr/libexec/qemu-bridge-helper &&
+chmod 4750 /usr/libexec/qemu-bridge-helper
